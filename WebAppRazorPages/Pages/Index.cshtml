@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>PRODUCTOS</h1>
+<table class="table" id="#productsTable">
+    <thead>
+        <tr>
+            <th>ProductID</th>
+            <th>ProductName</th>
+            <th>SupplierID</th>
+            <th>CategoryID</th>
+            <th>QuantityPerUnit</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+
+@section Scripts{
+    <script src="~/lib/axios/axios.min.js"></script>
+    <script src="~/js/index.js"></script>
+}
