@@ -1,6 +1,7 @@
 ﻿(function () {
+
     const productsTable = document.querySelector("#productsTable")
-    const productsTableTBody = productsTable.querySelector("tbody")
+    const productsTableTBody = productsTable.querySelector("tbody");
 
     axios.get('/Index?handler=products')
         .then(res => {
@@ -9,13 +10,12 @@
 
                 const tr = document.createElement("tr");
 
-                tr.append(createTd(product.ProductID))
-                tr.append(createTd(product.ProductName))
-                tr.append(createTd(product.SupplierID))
-                tr.append(createTd(product.CategoryID))
-                tr.append(createTd(product.QuantityPerUnit))
-
-                productsTableTBody.appendChild(tr)
+                tr.append(createTd(product.productID))
+                tr.append(createTd(product.productName))
+                tr.append(createTd(product.supplierID))
+                tr.append(createTd(product.categoryID))
+                tr.append(createTd(product.quantityPerUnit))
+                productsTableTBody.appendChild(tr);
             }
         })
         .catch(err => {

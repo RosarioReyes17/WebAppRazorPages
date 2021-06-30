@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAppRazorPages.Models;
 
+
 namespace WebAppRazorPages.Pages
 {
     public class IndexModel : PageModel
@@ -30,11 +31,12 @@ namespace WebAppRazorPages.Pages
         public void OnGet()
         {
 
+
         }
 
         public IActionResult OnGetProducts()
         {
-            var products = _connection.Query<product>("select* from Products").AsList();
+            var products = _connection.Query<product>("select * from Products");
             return new OkObjectResult(products);
         }
     }
