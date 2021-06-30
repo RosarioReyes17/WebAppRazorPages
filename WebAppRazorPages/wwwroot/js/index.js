@@ -15,6 +15,11 @@
                 tr.append(createTd(product.supplierID))
                 tr.append(createTd(product.categoryID))
                 tr.append(createTd(product.quantityPerUnit))
+                tr.append(createTd(product.unitPrice))
+                tr.append(createTd(product.unitsInStock))
+                tr.append(createTd(product.reorderLevel))
+                tr.append(createTd(product.discontinued))
+
                 productsTableTBody.appendChild(tr);
             }
         })
